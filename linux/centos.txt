@@ -1,0 +1,5 @@
+centos 连接不了网络：
+vi /etc/sysconfig/network-scripts/ifcfg-eht0
+把里面的ONBOOT=no 改成ONBOOT=yes
+然后再 /etc/init.d/network restart
+即可完成配置
