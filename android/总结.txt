@@ -1,0 +1,1 @@
+在android中使用relelativelayout 的时候 后面出现的ID不能作为前面的参考（比如：toleftof ID）
