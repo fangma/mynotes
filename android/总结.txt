@@ -1,1 +1,2 @@
-在android中使用relelativelayout 的时候 后面出现的ID不能作为前面的参考（比如：toleftof ID）
+1 在android中使用relelativelayout 的时候 后面出现的ID不能作为前面的参考（比如：toleftof ID）
+2 spinner 显示位置的两种方式android:spinnerMode="dropdown" 从spinner底部弹出 android:spinnerMode="dialog" 会弹出dialog显示在屏幕中央

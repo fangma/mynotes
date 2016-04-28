@@ -1,0 +1,43 @@
+
+//注册屏幕监听
+        registerScreenBroadcastReceiver();
+
+
+@Override
+    protected void onPause() {
+        super.onPause();
+        context.unregisterReceiver(screenBroadcastReceiver);
+        Log.e("screenBR", "screenBroadcastReceiver取消注册了");
+    }
+
+    private void registerScreenBroadcastReceiver() {
+        screenBroadcastReceiver = new ScreenBroadcastReceiver();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(Intent.ACTION_SCREEN_OFF);//当屏幕锁屏的时候触发
+        intentFilter.addAction(Intent.ACTION_SCREEN_ON);//当屏幕解锁的时候触发
+        intentFilter.addAction(Intent.ACTION_USER_PRESENT);//当用户重新唤醒手持设备时触发
+        context.registerReceiver(screenBroadcastReceiver, intentFilter);
+        Log.e("screenBR", "screenBroadcastReceiver注册了");
+    }
+    //重写广播
+    class ScreenBroadcastReceiver extends BroadcastReceiver {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String strAction = intent.getAction();
+            if (Intent.ACTION_SCREEN_OFF.equals(strAction)){
+                //屏幕锁屏
+                Log.e("screenBR", "屏幕锁屏：ACTION_SCREEN_OFF触发");
+            }else if (Intent.ACTION_SCREEN_ON.equals(strAction)){
+                //屏幕解锁(实际测试效果，不能用这个来判断解锁屏幕事件)
+                //【因为这个是解锁的时候触发，而解锁的时候广播还未注册】
+                Log.e("screenBR", "屏幕解锁：ACTION_SCREEN_ON触发");
+            }else if (Intent.ACTION_USER_PRESENT.equals(strAction)){
+                //屏幕解锁(该Action可以通过静态注册的方法注册)
+                //在解锁之后触发的，广播已注册
+                Log.e("screenBR", "屏幕解锁成功：ACTION_USER_PRESENT触发");
+            }else{
+                //nothing
+            }
+        }
+    }

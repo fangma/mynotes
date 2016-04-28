@@ -1,0 +1,23 @@
+ defaultConfig {
+        applicationId "com.iflytek.marketsurveillanceapp"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1007
+        versionName "1.0.7"
+        signingConfig signingConfigs.scjgconfig
+        /*分包*/
+        multiDexEnabled true
+    }
+
+以下是5.0以下需要的处理
+build.gradle 里面添加  compile 'com.android.support:multidex:1.0.0'/* 5.0以下的手机需要因为不支持MUitiDex（分包）*/
+application里面添加
+ /**
+     * 5.0以下的手机需要因为不支持MUitiDex（分包）
+     * @param base
+     */
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
