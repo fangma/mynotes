@@ -10,4 +10,8 @@
 
 4 http://blog.csdn.net/shuaihj/article/details/8808409  
 位图引起的内存溢出OutOfMemory解决方案   
+
+
+5 http://zhidao.baidu.com/link?url=482HDFAGEhFram474pY9lXixVyMZz-PPiVGvcYLfPLzmZL-2z1dpnU35m4jY7ynAMZqItjTxu0A0KWXMcI26bS0aacTPVIxFwytFFEGGB-K
+调用startactivityforresult后，onactivityresult为什么立刻响应
          
