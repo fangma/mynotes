@@ -1,17 +1,17 @@
-1£º http://blog.csdn.net/maosidiaoxian/article/details/43148643   
+ï»¿1ï¼š http://blog.csdn.net/maosidiaoxian/article/details/43148643   
       
-Ê¹ÓÃGradle·¢²¼Android¿ªÔ´ÏîÄ¿µ½JCenter 
+ä½¿ç”¨Gradleå‘å¸ƒAndroidå¼€æºé¡¹ç›®åˆ°JCenter 
 
-2£ºhttp://tools.android-studio.org/   android studio 
-ÅäÖÃµÄÏÂÔØ
+2ï¼šhttp://tools.android-studio.org/   android studio 
+é…ç½®çš„ä¸‹è½½
   
 3 http://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.type=image&foreground.space.trim=1&foreground.space.pad=0&foreColor=607d8b%2C0&crop=0&backgroundShape=square&backColor=ffffff%2C100&effects=none
-ÔÚÏßÍ¼Æ¬·Ö±æÂÊ×ª¹Ø
+åœ¨çº¿å›¾ç‰‡åˆ†è¾¨ç‡è½¬å…³
 
 4 http://blog.csdn.net/shuaihj/article/details/8808409  
-Î»Í¼ÒıÆğµÄÄÚ´æÒç³öOutOfMemory½â¾ö·½°¸   
+ä½å›¾å¼•èµ·çš„å†…å­˜æº¢å‡ºOutOfMemoryè§£å†³æ–¹æ¡ˆ   
 
 
 5 http://zhidao.baidu.com/link?url=482HDFAGEhFram474pY9lXixVyMZz-PPiVGvcYLfPLzmZL-2z1dpnU35m4jY7ynAMZqItjTxu0A0KWXMcI26bS0aacTPVIxFwytFFEGGB-K
-µ÷ÓÃstartactivityforresultºó£¬onactivityresultÎªÊ²Ã´Á¢¿ÌÏìÓ¦
+è°ƒç”¨startactivityforresultåï¼Œonactivityresultä¸ºä»€ä¹ˆç«‹åˆ»å“åº”
          
