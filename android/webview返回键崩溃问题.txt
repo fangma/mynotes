@@ -1,0 +1,41 @@
+﻿1 解决webview返回崩溃问题
+    /**
+     * 解决webview返回崩溃问题(会引起finish之后的闪烁问题已在manifest处理)
+     */
+    @Override
+    public void finish() {
+        if (webView != null) {
+            webView.getSettings().setBuiltInZoomControls(false);
+            ViewGroup view = (ViewGroup) getWindow().getDecorView();
+            view.removeAllViews();
+        }
+        doDestory();
+
+        super.finish();
+    }
+
+2 引起finish之后的闪烁问题已在manifest处理 方案一
+
+
+	<activity
+            android:name=".activity.DataDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" //设置主题
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+
+3 引起finish之后的闪烁问题已在manifest处理 方案二
+
+    protected void onCreate(Bundle savedInstanceState) {
+        this.setTheme(R.style.BaseActivityTheme); //设置主题
+        super.onCreate(savedInstanceState);
+        initWindow();
+    }
+
+    <style name="BaseActivityTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>

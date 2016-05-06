@@ -1,0 +1,33 @@
+﻿1 webview.reload()影响keyDown监听，使用dispatchKeyEvent监听
+
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        //webview.reload()导致onKeyDown监听不到，用了此方法
+        if (event.getKeyCode() == KeyEvent.KEYCODE_BACK
+                && event.getAction() == KeyEvent.ACTION_DOWN
+                && event.getRepeatCount() == 0) {
+            backPressDeal();
+            return true;
+        }
+        return super.dispatchKeyEvent(event);
+    }
+
+2 dialog如果没有dismiss会影响到keyDown监听，使用dispatchKeyEvent监听
+
+@Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        Log.e("data","dispatchKeyEvent click");
+        //dialog没调用dismiss会影响activity监听
+        if (event.getKeyCode() == KeyEvent.KEYCODE_BACK) {
+            Intent intent = new Intent();
+            if(isFaceRegistSuccess){
+                intent.putExtra("settingStatus", "已设置");
+            }else{
+                intent.putExtra("settingStatus", "未设置");
+            }
+            setResult(SysCode.STARTACTIVIY_FORRESULT_CODE.FACE_LOGIN_REGIST, intent);
+            finish();
+            return true;
+        }
+        return super.dispatchKeyEvent(event);
+    }
