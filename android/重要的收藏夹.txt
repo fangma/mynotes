@@ -18,3 +18,9 @@
 
 6 http://blog.csdn.net/liu_qiqi/article/details/38304033
 Android Activity 中 onActivityResult() 与 setResult()的调用时机   
+
+7 http://www.cnblogs.com/hawkon/p/3593709.html
+GitHub 优秀的 Android 开源项目1
+
+8 https://github.com/Trinea/android-open-project#%E7%AC%AC%E4%BA%94%E9%83%A8%E5%88%86
+Android 优秀的 android开源项目分类汇总2

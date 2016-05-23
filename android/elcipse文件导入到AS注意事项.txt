@@ -1,0 +1,3 @@
+先打包成build
+如果是gbk编码要用notepadd++转化成utf-8无bom格式
+AS工程里面new-import modle 选中解压好的文件
