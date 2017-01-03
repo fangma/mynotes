@@ -1,2 +1,2 @@
-@android.support.annotation.IdRes int id2 = 235648; //注解
+﻿@android.support.annotation.IdRes int id2 = 235648; //注解
 setId(id2)
