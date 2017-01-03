@@ -1,2 +1,3 @@
-@android.support.annotation.IdRes int id2 = 235648; //加上这句话
+@android.support.annotation.IdRes int id2 = 235648; //录脫脡脧脮芒戮盲禄掳
 setId(id2)
+test
