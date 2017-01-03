@@ -1,9 +1,0 @@
-github本地 推送到github流程：
-1 git add . 添加
-2 git commit -m "注解" 提交到服务器
-3 git push 推送到服务器
-
-解决git乱码问题的方法是：
-
-先用notepad 改变编码语言为utf-8
-然后再打开重新保存
