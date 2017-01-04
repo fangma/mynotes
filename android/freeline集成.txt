@@ -1,0 +1,35 @@
+
+网上介绍地址：http://www.jianshu.com/p/8e5a41fb224f?mType=Group
+1 下载freeline插件
+2 下载python 选择正确的版本，现在使用的是2.7.9
+3 本地集成
+  1：application设置：oncreate 里面添加 //初始化freeline
+        FreelineCore.init(this);
+  2：project gradle dependencies{}里面添加： classpath 'com.antfortune.freeline:gradle:0.8.4'
+  3：3.1 app gradle ：最上面添加：
+     apply plugin:'com.antfortune.freeline'
+     3.2 android里面添加：
+     android freeline {hack true}
+     3.3 dependencies里面添加：
+     debugCompile 'com.antfortune.freeline:runtime:0.8.4'
+     releaseCompile 'com.antfortune.freeline:runtime-no-op:0.8.4'
+     testCompile 'com.antfortune.freeline:runtime-no-op:0.8.4'
+
+4 执行编译：
+  4.1 在as的freeline窗口中输入：gradlew initFreeline -Pmirror，初始化配置（比较久）
+
+  4.2 在as的freeline窗口中输入：Python freeline.py，开始进行编译
+
+总结：在上面的操作中如果没有修改代码运行freeline是不会重新启动apk的
+
+执行gradlew命令可能存在下载gradle问题，因此需要修改gradle配置：gradle设置里面选择Use default gradle wrapper
+项目目录gradle\wrapper gradle-wrapper.properties 属性distributionUrl修改为distributionUrl=gradle-2.10-all.zip
+再执行gradlew build命令 就会把gradlew解压并缓存到用户目录：C:\Users\qxb-810\.gradle\wrapper\dists中，完成gradle
+配置 不需要每次重新下载
+
+
+如果每次新建项目都会下载gradle可以在setting / system setting /http Proxy 中选择Manual Proxy configuration 配置其中的host name为：127.0.0.1 Port number：默认为80，这样就不会每次重新下载
+
+
+
+  
